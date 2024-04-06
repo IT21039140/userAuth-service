@@ -1,2 +1,2 @@
-# userAuth-service
-CTSE assignment 2 userAuth-service
+# userauth-service
+CTSE assignment 2 userauth-service
