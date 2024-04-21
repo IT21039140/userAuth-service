@@ -7,7 +7,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  GKE_CLUSTER: ctse-autopilot-cluster-1  # Change this to your cluster's name 11111
+  GKE_CLUSTER: ctse-autopilot-cluster-1  # Change this to your cluster's name 111
   GKE_ZONE: asia-south2    # Change this to your cluster's zone
   IMAGE: gcr.io/${{ secrets.GCP_PROJECT_ID }}/userauth-service-image:latest
 
