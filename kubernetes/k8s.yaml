@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: userauth-service-web-app-deployment  # Name of the deployment
 spec:
-  replicas: 2  # Number of replicas
+  replicas: 1  # Number of replicas
   selector:
     matchLabels:
       app: userauth-service-web-app  # This should match the spec.template.metadata.labels
