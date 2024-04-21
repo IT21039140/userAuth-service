@@ -27,6 +27,7 @@ jobs:
 
     - name: Build and Push Docker image
       run: |
+        gcloud builds submit --tag $IMAGE --project $PROJECT_ID
         gcloud builds submit --tag $IMAGE
 
     - name: Install kubectl
