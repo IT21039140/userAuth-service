@@ -42,7 +42,7 @@ jobs:
 
     - name: Deploy to GKE
       run: |
-        kubectl apply -f kubernetes/k8s.yaml --validate=false
+        kubectl apply -f kubernetes/k8s.yaml
         kubectl rollout status deployment/userauth-service-web-app-deployment
 
     - name: Verify deployment
