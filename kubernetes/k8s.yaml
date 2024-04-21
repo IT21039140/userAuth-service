@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: userAuth-service-web-app-deployment  # Name of the deployment
+  name: userauth-service-web-app-deployment  # Name of the deployment
 spec:
   replicas: 2  # Number of replicas
   selector:
     matchLabels:
-      app: userAuth-service-web-app  # This should match the spec.template.metadata.labels
+      app: userauth-service-web-app  # This should match the spec.template.metadata.labels
   template:
     metadata:
       labels:
-        app: userAuth-service-web-app 
+        app: userauth-service-web-app 
     spec:
       containers:
-      - name: userAuth-service-web-app 
+      - name: userauth-service-web-app 
         image: gcr.io/ctse-assignment-2/userauth-service-image:latest  # Be sure to replace with your actual image
         ports:
         - containerPort: 5005  # The port your container exposes
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: userAuth-service-web-app-service  # Name of the service
+  name: userauth-service-web-app-service  # Name of the service
 spec:
   selector:
-    app: userAuth-service-web-app   # This should match the template.metadata.labels in your Deployment
+    app: userauth-service-web-app   # This should match the template.metadata.labels in your Deployment
   ports:
   - protocol: TCP
     port: 81  # The service port
